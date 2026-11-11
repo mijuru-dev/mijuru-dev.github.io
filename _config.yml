@@ -1,0 +1,7 @@
+title: Mijuru Docs
+description: Documentation, support and feedback for Mijuru wallpaper products.
+url: https://mijuru-dev.github.io
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mijuru Docs</title>
+<meta name="description" content="Documentation, support and feedback for Mijuru products: mijuru.com, the Linux desktop app, the Android app and the browser extension.">
+<link rel="canonical" href="https://mijuru-dev.github.io/">
+<!-- Google Search Console: <meta name="google-site-verification" content="..."> -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<meta property="og:title" content="Mijuru Docs">
+<meta property="og:description" content="Free HD, 4K and 8K wallpapers on every screen — documentation and feedback.">
+<meta property="og:image" content="https://mijuru-dev.github.io/assets/extension.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f6fb; --surface:#ffffff; --line:#e3e4ef; --text:#12142a; --muted:#5b6180;
+  --accent:#4d4af7; --accent-hi:#3a37e0; --accent2:#c64bd8; --ok:#1f8a4c; --warn:#a46200;
+  --chip:#eef0ff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a0d18; --surface:#13182a; --line:#232a44; --text:#eef0fa; --muted:#98a1bc;
+    --accent:#6f6dff; --accent-hi:#8b89ff; --accent2:#d872e6; --ok:#4cc38a; --warn:#f6b93b; --chip:#1b2140;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a0d18; --surface:#13182a; --line:#232a44; --text:#eef0fa; --muted:#98a1bc;
+  --accent:#6f6dff; --accent-hi:#8b89ff; --accent2:#d872e6; --ok:#4cc38a; --warn:#f6b93b; --chip:#1b2140;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--accent)} a:hover{color:var(--accent-hi)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font:600 20px "Space Grotesk",sans-serif}
+.brand img{width:32px;height:32px;border-radius:8px}
+.langs{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+.langs button{border:0;background:none;color:var(--muted);font:500 13px Inter,sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.hero{padding:40px 0 28px}
+.hero h1{font:600 clamp(2rem,6vw,3.4rem)/1.1 "Space Grotesk",sans-serif;letter-spacing:-.02em;margin:0 0 14px}
+.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:60ch;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:24px 0 48px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .shot{aspect-ratio:16/9;background:var(--chip);overflow:hidden}
+.card .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.card .shot.tall img{object-fit:cover;object-position:top}
+.card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h2{font:600 1.2rem "Space Grotesk",sans-serif;margin:0}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--ok)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.beta{color:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:var(--chip);color:var(--text);font-size:.78rem;padding:3px 10px;border-radius:999px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.88rem;padding:8px 14px;border-radius:10px;border:1px solid var(--line);color:var(--text)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent-hi);color:#fff}
+section h3{font:600 1.4rem "Space Grotesk",sans-serif;margin:0 0 12px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:48px}
+.how div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.how b{display:block;margin-bottom:4px}
+.how p{margin:0;color:var(--muted);font-size:.93rem}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="https://mijuru.dev"><img src="assets/logo.png" alt="">Mijuru <span style="color:var(--muted);font-weight:500">docs</span></a>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="ru">RU</button><button data-lang="uk">UK</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n-html="hero_title">Wallpapers for <span>every screen</span></h1>
+    <p data-i18n="hero_sub">Free HD, 4K and 8K wallpapers on the web, on your phone, on your desktop and on every new tab. Find guides, answers and a place to report problems or suggest ideas.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="shot"><img src="assets/website.jpg" alt="" loading="lazy"></div>
+      <div class="body">
+        <span class="status" data-i18n="st_live">Available</span>
+        <h2>mijuru.com</h2>
+        <p data-i18n="web_desc">The wallpaper catalog: HD, 4K and 8K for phone, desktop and tablet, plus avatars for social networks. New wallpapers every day.</p>
+        <div class="chips"><span>Web</span><span>HD · 4K · 8K</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://mijuru.com" data-i18n="open_site">Open site</a>
+          <a class="btn" href="website/" data-i18n="docs">Docs</a>
+          <a class="btn" href="https://github.com/mijuru-dev/website/issues/new/choose" data-i18n="feedback">Report a problem</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><img src="assets/extension.webp" alt="" loading="lazy"></div>
+      <div class="body">
+        <span class="status" data-i18n="st_live">Available</span>
+        <h2>Mijuru Wallpapers <small style="color:var(--muted);font-weight:500" data-i18n="ext_kind">· browser extension</small></h2>
+        <p data-i18n="ext_desc">A new 4K wallpaper on every new tab, with a clock, search and your shortcuts. The whole catalog is one click away in the toolbar.</p>
+        <div class="chips"><span>Chrome</span><span>Edge</span><span>Firefox</span><span data-i18n="opera_soon">Opera — in review</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://chromewebstore.google.com/detail/mijuru-wallpapers/jlkpdnlkhknaifdjfjdepbfmklfpamfh">Chrome</a>
+          <a class="btn primary" href="https://microsoftedge.microsoft.com/addons/detail/mijuru-wallpapers/cdnegcioifbeoldnojbgcopnklpneodo">Edge</a>
+          <a class="btn primary" href="https://addons.mozilla.org/firefox/addon/mijuru-wallpapers/">Firefox</a>
+          <a class="btn" href="wallpapers-browser-extension/" data-i18n="docs">Docs</a>
+          <a class="btn" href="https://github.com/mijuru-dev/wallpapers-browser-extension/issues/new/choose" data-i18n="feedback">Report a problem</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><img src="assets/desktop.webp" alt="" loading="lazy"></div>
+      <div class="body">
+        <span class="status" data-i18n="st_live">Available</span>
+        <h2>Wallpapers by Mijuru <small style="color:var(--muted);font-weight:500" data-i18n="desk_kind">· Linux</small></h2>
+        <p data-i18n="desk_desc">Set any wallpaper in one click, change it on a schedule from your playlist, control it from the tray. For GNOME on x86-64.</p>
+        <div class="chips"><span>Snap</span><span data-i18n="flathub_soon">Flathub — soon</span><span data-i18n="winmac_planned">Windows, macOS — planned</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://snapcraft.io/wallpapers-by-mijuru">Snap Store</a>
+          <a class="btn" href="wallpapers-desktop-app/" data-i18n="docs">Docs</a>
+          <a class="btn" href="https://github.com/mijuru-dev/wallpapers-desktop-app/issues/new/choose" data-i18n="feedback">Report a problem</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot tall"><img src="assets/mobile.webp" alt="" loading="lazy"></div>
+      <div class="body">
+        <span class="status beta" data-i18n="st_beta">Closed testing</span>
+        <h2>Wallpapers by Mijuru <small style="color:var(--muted);font-weight:500" data-i18n="mob_kind">· Android</small></h2>
+        <p data-i18n="mob_desc">Thousands of portrait wallpapers. Set one on your home screen, lock screen or both in a tap. No ads, no sign-up.</p>
+        <div class="chips"><span>Android 7.0+</span><span data-i18n="ios_dev">iOS — in development</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://groups.google.com/g/mijuru-wallpaper-app-testers" data-i18n="become_tester">Become a tester</a>
+          <a class="btn" href="wallpapers-mobile-app/" data-i18n="docs">Docs</a>
+          <a class="btn" href="https://github.com/mijuru-dev/wallpapers-mobile-app/issues/new/choose" data-i18n="feedback">Report a problem</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <section>
+    <h3 data-i18n="how_title">How to get help</h3>
+    <div class="how">
+      <div><b data-i18n="h1_t">Something doesn't work?</b><p data-i18n="h1_d">Use “Report a problem” on the product card — it opens an issue form that asks for your version and system, so we can fix it faster.</p></div>
+      <div><b data-i18n="h2_t">Have an idea or a question?</b><p data-i18n="h2_d">Share it in <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: ideas, wallpaper requests and Q&amp;A. Vote 👍 for the ideas you like.</p></div>
+      <div><b data-i18n="h3_t">In English, please</b><p data-i18n="h3_d">Issues are kept in English so everyone can find them — a machine translation is fine. Email works in English, Russian or Ukrainian.</p></div>
+      <div><b data-i18n="h4_t">Private matter?</b><p data-i18n="h4_d">Copyright requests: use “Report image” on the wallpaper page. Everything else: <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Mijuru</span>
+    <nav>
+      <a href="https://mijuru.dev">mijuru.dev</a>
+      <a href="https://mijuru.com">mijuru.com</a>
+      <a href="https://github.com/mijuru-dev">GitHub</a>
+      <a href="https://mijuru.com/privacy-policy" data-i18n="privacy">Privacy</a>
+    </nav>
+  </footer>
+</div>
+
+<script>
+const T = {
+  ru: {
+    hero_title: 'Обои для <span>любого экрана</span>',
+    hero_sub: 'Бесплатные обои в HD, 4K и 8K — на сайте, в телефоне, на рабочем столе и в каждой новой вкладке. Здесь инструкции, ответы на вопросы и место, где можно сообщить о проблеме или предложить идею.',
+    st_live: 'Доступно', st_beta: 'Закрытое тестирование',
+    web_desc: 'Каталог обоев: HD, 4K и 8K для телефона, компьютера и планшета, а также аватарки для соцсетей. Новые обои каждый день.',
+    open_site: 'Открыть сайт', docs: 'Документация', feedback: 'Сообщить о проблеме',
+    ext_kind: '· расширение для браузера',
+    ext_desc: 'Новые 4K-обои в каждой новой вкладке, часы, поиск и ваши ярлыки. Весь каталог — в один клик с панели браузера.',
+    opera_soon: 'Opera — на модерации',
+    desk_kind: '· Linux',
+    desk_desc: 'Установка обоев в один клик, автосмена по расписанию из вашего плейлиста, управление из трея. Для GNOME на x86-64.',
+    flathub_soon: 'Flathub — скоро', winmac_planned: 'Windows, macOS — в планах',
+    mob_kind: '· Android',
+    mob_desc: 'Тысячи вертикальных обоев. Ставьте на главный экран, экран блокировки или оба — в одно касание. Без рекламы и регистрации.',
+    ios_dev: 'iOS — в разработке', become_tester: 'Стать тестировщиком',
+    how_title: 'Как получить помощь',
+    h1_t: 'Что-то не работает?', h1_d: 'Нажмите «Сообщить о проблеме» в карточке продукта — форма спросит версию и систему, так мы исправим быстрее.',
+    h2_t: 'Есть идея или вопрос?', h2_d: 'Пишите в <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: идеи, запросы обоев и вопросы. Голосуйте 👍 за понравившиеся идеи.',
+    h3_t: 'На английском', h3_d: 'Issues ведём на английском, чтобы их могли найти все, — машинный перевод подойдёт. На почту можно писать по-русски.',
+    h4_t: 'Личный вопрос?', h4_d: 'Запросы правообладателей — через «Пожаловаться на изображение» на странице обоев. Всё остальное — <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.',
+    privacy: 'Конфиденциальность'
+  },
+  uk: {
+    hero_title: 'Шпалери для <span>будь-якого екрана</span>',
+    hero_sub: 'Безкоштовні шпалери в HD, 4K та 8K — на сайті, у телефоні, на робочому столі й у кожній новій вкладці. Тут інструкції, відповіді на запитання та місце, де можна повідомити про проблему чи запропонувати ідею.',
+    st_live: 'Доступно', st_beta: 'Закрите тестування',
+    web_desc: 'Каталог шпалер: HD, 4K і 8K для телефона, комп’ютера та планшета, а також аватарки для соцмереж. Нові шпалери щодня.',
+    open_site: 'Відкрити сайт', docs: 'Документація', feedback: 'Повідомити про проблему',
+    ext_kind: '· розширення для браузера',
+    ext_desc: 'Нові 4K-шпалери в кожній новій вкладці, годинник, пошук і ваші ярлики. Увесь каталог — в один клік з панелі браузера.',
+    opera_soon: 'Opera — на модерації',
+    desk_kind: '· Linux',
+    desk_desc: 'Встановлення шпалер в один клік, автозміна за розкладом із вашого плейлиста, керування з трею. Для GNOME на x86-64.',
+    flathub_soon: 'Flathub — незабаром', winmac_planned: 'Windows, macOS — у планах',
+    mob_kind: '· Android',
+    mob_desc: 'Тисячі вертикальних шпалер. Встановлюйте на головний екран, екран блокування або обидва — одним дотиком. Без реклами та реєстрації.',
+    ios_dev: 'iOS — у розробці', become_tester: 'Стати тестувальником',
+    how_title: 'Як отримати допомогу',
+    h1_t: 'Щось не працює?', h1_d: 'Натисніть «Повідомити про проблему» в картці продукту — форма запитає версію та систему, так ми виправимо швидше.',
+    h2_t: 'Маєте ідею чи запитання?', h2_d: 'Пишіть у <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: ідеї, запити шпалер і запитання. Голосуйте 👍 за ідеї, що подобаються.',
+    h3_t: 'Англійською', h3_d: 'Issues ведемо англійською, щоб їх могли знайти всі, — машинний переклад підійде. На пошту можна писати українською.',
+    h4_t: 'Особисте питання?', h4_d: 'Запити правовласників — через «Поскаржитися на зображення» на сторінці шпалер. Усе інше — <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.',
+    privacy: 'Конфіденційність'
+  }
+};
+const EN = {};
+document.querySelectorAll('[data-i18n]').forEach(el => EN[el.dataset.i18n] = el.textContent);
+document.querySelectorAll('[data-i18n-html]').forEach(el => EN[el.dataset.i18nHtml] = el.innerHTML);
+EN.h4_d = document.querySelector('[data-i18n="h4_d"]').innerHTML;
+EN.h2_d = document.querySelector('[data-i18n="h2_d"]').innerHTML;
+
+const DOC_SUFFIX = { en: '', ru: 'README.ru.html', uk: 'README.uk.html' };
+
+function apply(lang){
+  const dict = lang === 'en' ? EN : T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = dict[el.dataset.i18n]; if (v == null) return;
+    if (/<a /.test(v)) el.innerHTML = v; else el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = dict[el.dataset.i18nHtml]; });
+  document.querySelectorAll('.langs button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  // docs links point to the localized README rendered by GitHub Pages
+  document.querySelectorAll('a[data-i18n="docs"]').forEach(a => {
+    const base = a.getAttribute('href').split('/')[0] + '/';
+    a.setAttribute('href', base + DOC_SUFFIX[lang]);
+  });
+  try { localStorage.setItem('mijuru-docs-lang', lang); } catch (e) {}
+}
+
+let initial = 'en';
+try { initial = localStorage.getItem('mijuru-docs-lang') || ''; } catch (e) {}
+if (!T[initial] && initial !== 'en') {
+  const nav = (navigator.language || 'en').slice(0, 2);
+  initial = nav === 'ru' ? 'ru' : (nav === 'uk' ? 'uk' : 'en');
+}
+document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => apply(b.dataset.lang)));
+apply(initial);
+</script>
+</body>
+</html>

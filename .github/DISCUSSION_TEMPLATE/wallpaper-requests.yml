@@ -1,0 +1,27 @@
+title: "[Request]: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Missing a category, theme, resolution or device? Tell us. Please write in **English** — a machine translation is fine.
+        If the same request already exists, add a 👍 to it instead.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you missing?
+      options:
+        - Category or theme
+        - Resolution or aspect ratio
+        - Device (phone, tablet, monitor)
+        - Avatars
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Be as specific as you can, e.g. "3440×1440 ultrawide", "Formula 1 wallpapers", "Pixel 9 Pro".
+    validations:
+      required: true

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mijuru-dev.github.io/sitemap.xml
+Sitemap: https://mijuru-dev.github.io/website/sitemap.xml
+Sitemap: https://mijuru-dev.github.io/wallpapers-browser-extension/sitemap.xml
+Sitemap: https://mijuru-dev.github.io/wallpapers-desktop-app/sitemap.xml
+Sitemap: https://mijuru-dev.github.io/wallpapers-mobile-app/sitemap.xml
