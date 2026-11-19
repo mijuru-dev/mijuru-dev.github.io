@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mijuru Docs</title>
-<meta name="description" content="Documentation, support and feedback for Mijuru products: mijuru.com, the Linux desktop app, the Android app and the browser extension.">
+<meta name="description" content="Documentation, support and feedback for Mijuru — small apps by one independent developer: wallpapers for every screen (mijuru.com, the browser extension, the Linux and Android apps) and Echo Page, a personal diary.">
 <link rel="canonical" href="https://mijuru-dev.github.io/">
 <!-- Google Search Console: <meta name="google-site-verification" content="..."> -->
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="Mijuru Docs">
-<meta property="og:description" content="Free HD, 4K and 8K wallpapers on every screen — documentation and feedback.">
+<meta property="og:description" content="Small apps by one independent developer: wallpapers for every screen and Echo Page, a personal diary. Documentation and feedback.">
 <meta property="og:image" content="https://mijuru-dev.github.io/assets/extension.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,8 +84,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
   </header>
 
   <div class="hero">
-    <h1 data-i18n-html="hero_title">Wallpapers for <span>every screen</span></h1>
-    <p data-i18n="hero_sub">Free HD, 4K and 8K wallpapers on the web, on your phone, on your desktop and on every new tab. Find guides, answers and a place to report problems or suggest ideas.</p>
+    <h1 data-i18n-html="hero_title">Small apps, <span>carefully made</span></h1>
+    <p data-i18n="hero_sub">Mijuru — apps by an independent developer: free HD, 4K and 8K wallpapers for every screen, and Echo Page, a personal diary that looks like a paper book. Here you’ll find guides, answers and a place to report problems or suggest ideas.</p>
   </div>
 
   <div class="grid">
@@ -150,12 +150,27 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
         </div>
       </div>
     </article>
+    <article class="card">
+      <div class="shot"><img src="assets/echo-page.jpg" alt="" loading="lazy"></div>
+      <div class="body">
+        <span class="status" data-i18n="st_live">Available</span>
+        <h2>Echo Page <small style="color:var(--muted);font-weight:500" data-i18n="ep_kind">· personal diary</small></h2>
+        <p data-i18n="ep_desc">A diary that looks like a paper book: your mood, a few lines and polaroid photos. A week, a month, half a year and a year later it brings the entry back so you can write a reflection. Entries stay in your browser.</p>
+        <div class="chips"><span>Web</span><span data-i18n="ep_chrome_soon">Chrome — soon</span><span>EN · RU · UK</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://echopage.mijuru.dev/app/?lang=en" data-href-ru="https://echopage.mijuru.dev/app/?lang=ru" data-href-uk="https://echopage.mijuru.dev/app/?lang=uk" data-i18n="ep_open">Open the diary</a>
+          <a class="btn" href="https://echopage.mijuru.dev/help" data-href-ru="https://echopage.mijuru.dev/ru/help" data-href-uk="https://echopage.mijuru.dev/uk/help" data-i18n="ep_guide">Guide</a>
+          <a class="btn" href="echo-page/" data-i18n="docs">Docs</a>
+          <a class="btn" href="https://github.com/mijuru-dev/echo-page/issues/new/choose" data-i18n="feedback">Report a problem</a>
+        </div>
+      </div>
+    </article>
   </div>
 
   <section>
     <h3 data-i18n="how_title">How to get help</h3>
     <div class="how">
-      <div><b data-i18n="h1_t">Something doesn't work?</b><p data-i18n="h1_d">Use “Report a problem” on the product card — it opens an issue form that asks for your version and system, so we can fix it faster.</p></div>
+      <div><b data-i18n="h1_t">Something doesn't work?</b><p data-i18n="h1_d">Use “Report a problem” on the product card — it opens an issue form that asks for your version and system, so we can fix it faster. Issues are public: never paste text from your Echo Page diary.</p></div>
       <div><b data-i18n="h2_t">Have an idea or a question?</b><p data-i18n="h2_d">Share it in <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: ideas, wallpaper requests and Q&amp;A. Vote 👍 for the ideas you like.</p></div>
       <div><b data-i18n="h3_t">In English, please</b><p data-i18n="h3_d">Issues are kept in English so everyone can find them — a machine translation is fine. Email works in English, Russian or Ukrainian.</p></div>
       <div><b data-i18n="h4_t">Private matter?</b><p data-i18n="h4_d">Copyright requests: use “Report image” on the wallpaper page. Everything else: <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.</p></div>
@@ -176,8 +191,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
 <script>
 const T = {
   ru: {
-    hero_title: 'Обои для <span>любого экрана</span>',
-    hero_sub: 'Бесплатные обои в HD, 4K и 8K — на сайте, в телефоне, на рабочем столе и в каждой новой вкладке. Здесь инструкции, ответы на вопросы и место, где можно сообщить о проблеме или предложить идею.',
+    hero_title: 'Небольшие приложения, <span>сделанные с заботой</span>',
+    hero_sub: 'Mijuru — приложения от независимого разработчика: бесплатные обои в HD, 4K и 8K для любого экрана и Echo Page — личный дневник, похожий на бумажную книгу. Здесь инструкции, ответы на вопросы и место, где можно сообщить о проблеме или предложить идею.',
     st_live: 'Доступно', st_beta: 'Закрытое тестирование',
     web_desc: 'Каталог обоев: HD, 4K и 8K для телефона, компьютера и планшета, а также аватарки для соцсетей. Новые обои каждый день.',
     open_site: 'Открыть сайт', docs: 'Документация', feedback: 'Сообщить о проблеме',
@@ -190,16 +205,19 @@ const T = {
     mob_kind: '· Android',
     mob_desc: 'Тысячи вертикальных обоев. Ставьте на главный экран, экран блокировки или оба — в одно касание. Без рекламы и регистрации.',
     ios_dev: 'iOS — в разработке', become_tester: 'Стать тестировщиком',
+    ep_kind: '· личный дневник',
+    ep_desc: 'Дневник, похожий на бумажную книгу: настроение, пара строк и фото-полароиды. Через неделю, месяц, полгода и год он сам вернёт запись, чтобы вы написали вывод. Записи хранятся в вашем браузере.',
+    ep_chrome_soon: 'Chrome — скоро', ep_open: 'Открыть дневник', ep_guide: 'Инструкция',
     how_title: 'Как получить помощь',
-    h1_t: 'Что-то не работает?', h1_d: 'Нажмите «Сообщить о проблеме» в карточке продукта — форма спросит версию и систему, так мы исправим быстрее.',
+    h1_t: 'Что-то не работает?', h1_d: 'Нажмите «Сообщить о проблеме» в карточке продукта — форма спросит версию и систему, так мы исправим быстрее. Issues публичны: никогда не вставляйте текст из дневника Echo Page.',
     h2_t: 'Есть идея или вопрос?', h2_d: 'Пишите в <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: идеи, запросы обоев и вопросы. Голосуйте 👍 за понравившиеся идеи.',
     h3_t: 'На английском', h3_d: 'Issues ведём на английском, чтобы их могли найти все, — машинный перевод подойдёт. На почту можно писать по-русски.',
     h4_t: 'Личный вопрос?', h4_d: 'Запросы правообладателей — через «Пожаловаться на изображение» на странице обоев. Всё остальное — <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.',
     privacy: 'Конфиденциальность'
   },
   uk: {
-    hero_title: 'Шпалери для <span>будь-якого екрана</span>',
-    hero_sub: 'Безкоштовні шпалери в HD, 4K та 8K — на сайті, у телефоні, на робочому столі й у кожній новій вкладці. Тут інструкції, відповіді на запитання та місце, де можна повідомити про проблему чи запропонувати ідею.',
+    hero_title: 'Невеликі застосунки, <span>зроблені з турботою</span>',
+    hero_sub: 'Mijuru — застосунки від незалежного розробника: безкоштовні шпалери в HD, 4K та 8K для будь-якого екрана та Echo Page — особистий щоденник, схожий на паперову книгу. Тут інструкції, відповіді на запитання та місце, де можна повідомити про проблему чи запропонувати ідею.',
     st_live: 'Доступно', st_beta: 'Закрите тестування',
     web_desc: 'Каталог шпалер: HD, 4K і 8K для телефона, комп’ютера та планшета, а також аватарки для соцмереж. Нові шпалери щодня.',
     open_site: 'Відкрити сайт', docs: 'Документація', feedback: 'Повідомити про проблему',
@@ -212,8 +230,11 @@ const T = {
     mob_kind: '· Android',
     mob_desc: 'Тисячі вертикальних шпалер. Встановлюйте на головний екран, екран блокування або обидва — одним дотиком. Без реклами та реєстрації.',
     ios_dev: 'iOS — у розробці', become_tester: 'Стати тестувальником',
+    ep_kind: '· особистий щоденник',
+    ep_desc: 'Щоденник, схожий на паперову книгу: настрій, кілька рядків і фото-полароїди. Через тиждень, місяць, пів року й рік він сам поверне запис, щоб ви написали висновок. Записи зберігаються у вашому браузері.',
+    ep_chrome_soon: 'Chrome — незабаром', ep_open: 'Відкрити щоденник', ep_guide: 'Інструкція',
     how_title: 'Як отримати допомогу',
-    h1_t: 'Щось не працює?', h1_d: 'Натисніть «Повідомити про проблему» в картці продукту — форма запитає версію та систему, так ми виправимо швидше.',
+    h1_t: 'Щось не працює?', h1_d: 'Натисніть «Повідомити про проблему» в картці продукту — форма запитає версію та систему, так ми виправимо швидше. Issues публічні: ніколи не вставляйте текст зі щоденника Echo Page.',
     h2_t: 'Маєте ідею чи запитання?', h2_d: 'Пишіть у <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: ідеї, запити шпалер і запитання. Голосуйте 👍 за ідеї, що подобаються.',
     h3_t: 'Англійською', h3_d: 'Issues ведемо англійською, щоб їх могли знайти всі, — машинний переклад підійде. На пошту можна писати українською.',
     h4_t: 'Особисте питання?', h4_d: 'Запити правовласників — через «Поскаржитися на зображення» на сторінці шпалер. Усе інше — <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.',
@@ -237,6 +258,11 @@ function apply(lang){
   });
   document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = dict[el.dataset.i18nHtml]; });
   document.querySelectorAll('.langs button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  // external links with per-language targets (data-href-ru / data-href-uk; the href in the markup is English)
+  document.querySelectorAll('a[data-href-ru]').forEach(a => {
+    if (!a.dataset.hrefEn) a.dataset.hrefEn = a.getAttribute('href');
+    a.setAttribute('href', lang === 'en' ? a.dataset.hrefEn : (a.dataset['href' + lang[0].toUpperCase() + lang.slice(1)] || a.dataset.hrefEn));
+  });
   // docs links point to the localized README rendered by GitHub Pages
   document.querySelectorAll('a[data-i18n="docs"]').forEach(a => {
     const base = a.getAttribute('href').split('/')[0] + '/';
