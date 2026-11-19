@@ -1,5 +1,5 @@
 title: Mijuru Docs
-description: Documentation, support and feedback for Mijuru — small apps by one independent developer: wallpapers for every screen and Echo Page, a personal diary.
+description: "Documentation, support and feedback for Mijuru — small apps by one independent developer: wallpapers for every screen and Echo Page, a personal diary."
 url: https://mijuru-dev.github.io
 plugins:
   - jekyll-sitemap
