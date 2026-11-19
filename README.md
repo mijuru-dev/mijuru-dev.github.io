@@ -1,6 +1,6 @@
 # Mijuru Docs
 
-Source of **https://mijuru-dev.github.io** — the documentation hub for Mijuru, small apps by one independent developer: wallpapers for every screen and Echo Page, a personal diary.
+Source of **https://mijuru-dev.github.io** — the documentation hub for Mijuru — small apps, carefully made: wallpapers for every screen and Echo Page, a personal diary.
 Product docs live in their own repositories and are published under this domain:
 [website](https://github.com/mijuru-dev/website) ·
 [wallpapers-browser-extension](https://github.com/mijuru-dev/wallpapers-browser-extension) ·
