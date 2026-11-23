@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mijuru Docs</title>
-<meta name="description" content="Documentation, support and feedback for Mijuru — small apps, carefully made: wallpapers for every screen (mijuru.com, the browser extension, the Linux and Android apps) and Echo Page, a personal diary.">
+<meta name="description" content="Documentation, support and feedback for Mijuru — small apps, carefully made: wallpapers for every screen (mijuru.com, the browser extension, the Linux and Android apps), Echo Page, a personal diary, and Dear Tab, family photos on every new tab.">
 <link rel="canonical" href="https://mijuru-dev.github.io/">
 <!-- Google Search Console: <meta name="google-site-verification" content="..."> -->
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="Mijuru Docs">
-<meta property="og:description" content="Small apps, carefully made: wallpapers for every screen and Echo Page, a personal diary. Documentation and feedback.">
+<meta property="og:description" content="Small apps, carefully made: wallpapers for every screen, Echo Page, a personal diary, and Dear Tab, family photos on every new tab. Documentation and feedback.">
 <meta property="og:image" content="https://mijuru-dev.github.io/assets/extension.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +85,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
 
   <div class="hero">
     <h1 data-i18n-html="hero_title">Small apps, <span>carefully made</span></h1>
-    <p data-i18n="hero_sub">Mijuru — small apps, carefully made: free HD, 4K and 8K wallpapers for every screen, and Echo Page, a personal diary that looks like a paper book. Here you’ll find guides, answers and a place to report problems or suggest ideas.</p>
+    <p data-i18n="hero_sub">Mijuru — small apps, carefully made: free HD, 4K and 8K wallpapers for every screen, Echo Page, a personal diary that looks like a paper book, and Dear Tab, family photos on every new tab. Here you’ll find guides, answers and a place to report problems or suggest ideas.</p>
   </div>
 
   <div class="grid">
@@ -166,12 +166,28 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
         </div>
       </div>
     </article>
+    <article class="card">
+      <div class="shot"><img src="assets/dear-tab.jpg" alt="" loading="lazy"></div>
+      <div class="body">
+        <span class="status beta" data-i18n="st_soon">Coming soon</span>
+        <h2>Dear Tab <small style="color:var(--muted);font-weight:500" data-i18n="dt_kind">· family photos on new tab</small></h2>
+        <p data-i18n="dt_desc">Photos of the people you love on every new tab, as polaroids with handwritten captions. One, three or nine at a time, ten backgrounds, a copy of everything in one file. Photos stay in your browser.</p>
+        <div class="chips"><span data-i18n="dt_chrome_soon">Chrome — coming soon</span><span>EN · RU · UK</span></div>
+        <div class="links">
+          <!-- TODO: add a "Chrome Web Store" button after publication -->
+          <a class="btn primary" href="https://deartab.mijuru.dev/" data-href-ru="https://deartab.mijuru.dev/ru/" data-href-uk="https://deartab.mijuru.dev/uk/" data-i18n="open_site">Open site</a>
+          <a class="btn" href="https://deartab.mijuru.dev/help" data-href-ru="https://deartab.mijuru.dev/ru/help" data-href-uk="https://deartab.mijuru.dev/uk/help" data-i18n="ep_guide">Guide</a>
+          <a class="btn" href="dear-tab/" data-i18n="docs">Docs</a>
+          <a class="btn" href="https://github.com/mijuru-dev/dear-tab/issues/new/choose" data-i18n="feedback">Report a problem</a>
+        </div>
+      </div>
+    </article>
   </div>
 
   <section>
     <h3 data-i18n="how_title">How to get help</h3>
     <div class="how">
-      <div><b data-i18n="h1_t">Something doesn't work?</b><p data-i18n="h1_d">Use “Report a problem” on the product card — it opens an issue form that asks for your version and system, so we can fix it faster. Issues are public: never paste text from your Echo Page diary.</p></div>
+      <div><b data-i18n="h1_t">Something doesn't work?</b><p data-i18n="h1_d">Use “Report a problem” on the product card — it opens an issue form that asks for your version and system, so we can fix it faster. Issues are public: never paste text from your Echo Page diary or attach personal photos from Dear Tab.</p></div>
       <div><b data-i18n="h2_t">Have an idea or a question?</b><p data-i18n="h2_d">Share it in <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: ideas, wallpaper requests and Q&amp;A. Vote 👍 for the ideas you like.</p></div>
       <div><b data-i18n="h3_t">In English, please</b><p data-i18n="h3_d">Issues are kept in English so everyone can find them — a machine translation is fine. Email works in English, Russian or Ukrainian.</p></div>
       <div><b data-i18n="h4_t">Private matter?</b><p data-i18n="h4_d">Copyright requests: use “Report image” on the wallpaper page. Everything else: <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.</p></div>
@@ -193,7 +209,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
 const T = {
   ru: {
     hero_title: 'Небольшие приложения, <span>сделанные с заботой</span>',
-    hero_sub: 'Mijuru — небольшие приложения, сделанные с заботой: бесплатные обои в HD, 4K и 8K для любого экрана и Echo Page — личный дневник, похожий на бумажную книгу. Здесь инструкции, ответы на вопросы и место, где можно сообщить о проблеме или предложить идею.',
+    hero_sub: 'Mijuru — небольшие приложения, сделанные с заботой: бесплатные обои в HD, 4K и 8K для любого экрана, Echo Page — личный дневник, похожий на бумажную книгу, и Dear Tab — фото близких на каждой новой вкладке. Здесь инструкции, ответы на вопросы и место, где можно сообщить о проблеме или предложить идею.',
     st_live: 'Доступно', st_beta: 'Закрытое тестирование',
     web_desc: 'Каталог обоев: HD, 4K и 8K для телефона, компьютера и планшета, а также аватарки для соцсетей. Новые обои каждый день.',
     open_site: 'Открыть сайт', docs: 'Документация', feedback: 'Сообщить о проблеме',
@@ -209,8 +225,10 @@ const T = {
     ep_kind: '· личный дневник',
     ep_desc: 'Дневник, похожий на бумажную книгу: настроение, пара строк и фото-полароиды. Через неделю, месяц, полгода и год он сам вернёт запись, чтобы вы написали вывод. Записи хранятся в вашем браузере.',
     ep_open: 'Открыть дневник', ep_guide: 'Инструкция',
+    st_soon: 'Скоро', dt_kind: '· фото близких в новой вкладке', dt_chrome_soon: 'Chrome — скоро',
+    dt_desc: 'Фото близких на каждой новой вкладке — полароиды с подписями от руки. Одно, три или девять сразу, десять фонов, копия всего в одном файле. Фото хранятся в вашем браузере.',
     how_title: 'Как получить помощь',
-    h1_t: 'Что-то не работает?', h1_d: 'Нажмите «Сообщить о проблеме» в карточке продукта — форма спросит версию и систему, так мы исправим быстрее. Issues публичны: никогда не вставляйте текст из дневника Echo Page.',
+    h1_t: 'Что-то не работает?', h1_d: 'Нажмите «Сообщить о проблеме» в карточке продукта — форма спросит версию и систему, так мы исправим быстрее. Issues публичны: никогда не вставляйте текст из дневника Echo Page и не прикладывайте личные фото из Dear Tab.',
     h2_t: 'Есть идея или вопрос?', h2_d: 'Пишите в <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: идеи, запросы обоев и вопросы. Голосуйте 👍 за понравившиеся идеи.',
     h3_t: 'На английском', h3_d: 'Issues ведём на английском, чтобы их могли найти все, — машинный перевод подойдёт. На почту можно писать по-русски.',
     h4_t: 'Личный вопрос?', h4_d: 'Запросы правообладателей — через «Пожаловаться на изображение» на странице обоев. Всё остальное — <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.',
@@ -218,7 +236,7 @@ const T = {
   },
   uk: {
     hero_title: 'Невеликі застосунки, <span>зроблені з турботою</span>',
-    hero_sub: 'Mijuru — невеликі застосунки, зроблені з турботою: безкоштовні шпалери в HD, 4K та 8K для будь-якого екрана та Echo Page — особистий щоденник, схожий на паперову книгу. Тут інструкції, відповіді на запитання та місце, де можна повідомити про проблему чи запропонувати ідею.',
+    hero_sub: 'Mijuru — невеликі застосунки, зроблені з турботою: безкоштовні шпалери в HD, 4K та 8K для будь-якого екрана, Echo Page — особистий щоденник, схожий на паперову книгу, і Dear Tab — фото рідних на кожній новій вкладці. Тут інструкції, відповіді на запитання та місце, де можна повідомити про проблему чи запропонувати ідею.',
     st_live: 'Доступно', st_beta: 'Закрите тестування',
     web_desc: 'Каталог шпалер: HD, 4K і 8K для телефона, комп’ютера та планшета, а також аватарки для соцмереж. Нові шпалери щодня.',
     open_site: 'Відкрити сайт', docs: 'Документація', feedback: 'Повідомити про проблему',
@@ -234,8 +252,10 @@ const T = {
     ep_kind: '· особистий щоденник',
     ep_desc: 'Щоденник, схожий на паперову книгу: настрій, кілька рядків і фото-полароїди. Через тиждень, місяць, пів року й рік він сам поверне запис, щоб ви написали висновок. Записи зберігаються у вашому браузері.',
     ep_open: 'Відкрити щоденник', ep_guide: 'Інструкція',
+    st_soon: 'Незабаром', dt_kind: '· фото рідних у новій вкладці', dt_chrome_soon: 'Chrome — незабаром',
+    dt_desc: 'Фото рідних на кожній новій вкладці — полароїди з підписами від руки. Одне, три чи дев’ять одразу, десять варіантів тла, копія всього в одному файлі. Фото зберігаються у вашому браузері.',
     how_title: 'Як отримати допомогу',
-    h1_t: 'Щось не працює?', h1_d: 'Натисніть «Повідомити про проблему» в картці продукту — форма запитає версію та систему, так ми виправимо швидше. Issues публічні: ніколи не вставляйте текст зі щоденника Echo Page.',
+    h1_t: 'Щось не працює?', h1_d: 'Натисніть «Повідомити про проблему» в картці продукту — форма запитає версію та систему, так ми виправимо швидше. Issues публічні: ніколи не вставляйте текст зі щоденника Echo Page і не додавайте особисті фото з Dear Tab.',
     h2_t: 'Маєте ідею чи запитання?', h2_d: 'Пишіть у <a href="https://github.com/orgs/mijuru-dev/discussions">Discussions</a>: ідеї, запити шпалер і запитання. Голосуйте 👍 за ідеї, що подобаються.',
     h3_t: 'Англійською', h3_d: 'Issues ведемо англійською, щоб їх могли знайти всі, — машинний переклад підійде. На пошту можна писати українською.',
     h4_t: 'Особисте питання?', h4_d: 'Запити правовласників — через «Поскаржитися на зображення» на сторінці шпалер. Усе інше — <a href="mailto:m@mijuru.dev">m@mijuru.dev</a>.',
